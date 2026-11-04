@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ADCLab | 에이디시랩 - 홈페이지 리뉴얼 중</title>
+  <meta name="description" content="홈페이지 리뉴얼 중입니다. 새로운 모습으로 다시 만나요.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Sora:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B2A5B;
+      --steel: #5B6472;
+      --bg: #ffffff;
+      --line: #e3e6ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --navy: #ffffff; --steel: #aab3c2; --bg: #0B2A5B; --line: #25437a; }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--steel);
+      font-family: "Noto Sans KR", system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    main { max-width: 640px; width: 100%; }
+    .logo {
+      font-family: "Sora", "Noto Sans KR", sans-serif;
+      font-size: clamp(48px, 12vw, 88px);
+      line-height: 1;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .logo b { font-weight: 700; color: var(--navy); }
+    .logo span { font-weight: 300; color: var(--steel); }
+    .ko {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: clamp(18px, 4.5vw, 28px);
+      margin: 14px 0 0;
+    }
+    hr { border: 0; border-top: 1px solid var(--line); width: 64px; margin: 40px auto; }
+    h1 {
+      font-size: clamp(20px, 4.8vw, 28px);
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 12px;
+      word-break: keep-all;
+    }
+    p { margin: 0; font-size: clamp(15px, 3.8vw, 18px); word-break: keep-all; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="logo" aria-label="ADCLab"><b>ADC</b><span>Lab</span></p>
+    <p class="ko">에이디시랩</p>
+    <hr>
+    <h1>홈페이지 리뉴얼 중입니다.</h1>
+    <p>새로운 모습으로 다시 만나요.</p>
+  </main>
+</body>
+</html>
