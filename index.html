@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Sora:wght@300;700&display=swap" rel="stylesheet">
+  <noscript><style>body { opacity: 1 !important; }</style></noscript>
   <style>
     :root {
       --navy: #0B2A5B;
@@ -30,7 +31,10 @@
       justify-content: center;
       padding: 24px;
       text-align: center;
+      opacity: 0;
+      transition: opacity .4s ease;
     }
+    body.ready { opacity: 1; }
     main { max-width: 640px; width: 100%; }
     .logo {
       font-family: "Sora", "Noto Sans KR", sans-serif;
@@ -66,5 +70,13 @@
     <h1>홈페이지 리뉴얼 중입니다.</h1>
     <p>새로운 모습으로 다시 만나요.</p>
   </main>
+  <script>
+    // 폰트 로딩이 끝난 뒤 한 번에 표시 (글자가 깜빡이거나 바뀌는 현상 방지)
+    (function () {
+      var show = function () { document.body.classList.add('ready'); };
+      setTimeout(show, 1500); // 폰트가 늦어도 1.5초 뒤엔 표시
+      if (document.fonts && document.fonts.ready) { document.fonts.ready.then(show); } else { show(); }
+    })();
+  </script>
 </body>
 </html>
